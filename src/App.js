@@ -1,28 +1,28 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
+import React, { useEffect } from 'react';
+import { FiSettings } from 'react-icons/fi';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './App.css';
+import { Footer, Navbar, Sidebar, ThemeSettings } from './components';
+import { useStateContext } from './contexts/ContextProvider';
 import {
-  Ecommerce,
-  Orders,
-  Calendar,
-  Employees,
-  Stacked,
-  Pyramid,
-  Customers,
-  Kanban,
   Area,
   Bar,
-  Pie,
-  Financial,
-  ColorPicker,
+  Calendar,
   ColorMapping,
+  ColorPicker,
+  Customers,
+  Ecommerce,
   Editor,
+  Employees,
+  Financial,
+  Kanban,
   Line,
+  Orders,
+  Pie,
+  Pyramid,
+  Stacked,
 } from './pages';
-import { useStateContext } from './contexts/ContextProvider';
-import './App.css';
 
 export const App = () => {
   const { activeMenu } = useStateContext();
